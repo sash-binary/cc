@@ -31,10 +31,19 @@
 * {
     font-family: 'IBM Plex Sans', Arial, sans-serif;
 }
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+    box-sizing: border-box;
+}
 body {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-    height: 100vh;
     padding: 0 20px;
+    font-size: 1.8rem;
+}
+.container {
+    max-width: 192rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+header {
+    width: 100%;
 }
