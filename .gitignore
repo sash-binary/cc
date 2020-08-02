@@ -48,6 +48,8 @@ Thumbs.db
 ######################
 *.sass-cache*
 .cache/
+.jekyll-cache/
+Gemfile.lock
 _site
 /.idea
 secrets.json
