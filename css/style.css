@@ -47,3 +47,10 @@ body {
 header {
     width: 100%;
 }
+.card-grid {
+    display: grid;
+    gap: 4rem;
+}
+.card {
+    max-width: 30rem;
+}
