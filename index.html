@@ -8,7 +8,7 @@ layout: home
 	<a href="{{ post.url | prepend: SourceUrl }}">
 		<div class="col">
 			<h2>{{ post.title }}</h2>
-			<img src="{{ post.image }}">
+			<img src="{{ post.image | prepend: SourceUrl }}">
 			<p><strong>{{ post.size }}</strong> - <strong>{{ post.price }}</strong></p>
 		</div>
 	</a>
