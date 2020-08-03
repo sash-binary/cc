@@ -37,7 +37,15 @@ html {
 }
 body {
     padding: 0 20px;
+    margin: 0;
     font-size: 1.8rem;
+}
+a {
+    text-decoration: none;
+    color: #333333;
+}
+img {
+    max-width: 100%;
 }
 .container {
     max-width: 160rem;
@@ -46,11 +54,34 @@ body {
 }
 header {
     width: 100%;
+    padding: 2rem 0;
+    text-align: center;
+}
+header ul li {
+    display: inline;
+    padding: 0 1rem;
 }
 .card-grid {
     display: grid;
     gap: 4rem;
+    grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
+    place-items: center;
+    margin: 2rem auto;
 }
 .card {
-    max-width: 30rem;
+    padding: 2rem;
+    box-shadow: 0 16px 20px 0 rgba(0, 0, 0, 0.05), 0 0 20px 0 rgba(0, 0, 0, 0.05);
 }
+.office-info-grid {
+    display: grid;
+    grid-template-columns: 30rem 1fr;
+    gap: 2rem;
+}
+@media screen and (max-width: 768px) {
+    .office-info-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.office-info-grid div:nth-child(even) {font-weight: bold;}
+.office-info-grid a {color: red; text-decoration: underline;}
+#mapid { height: 60rem; }
