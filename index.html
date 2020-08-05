@@ -2,14 +2,16 @@
 layout: home
 ---
 {% include geturl.html %}
+<P>All prices negotiable, we need to submit our proposal for selected office(s).</p>
 <div class="card-grid">
-{% for post in site.posts %}
+{% assign sorted = site.posts | sort: 'date' | reverse %}	
+{% for item in sorted %}
 <div class="card">
-	<a href="{{ post.url | prepend: SourceUrl }}">
+	<a href="{{ item.url | prepend: SourceUrl }}">
 		<div class="col">
-			<h2>{{ post.title }}</h2>
-			<img src="{{ post.image | prepend: SourceUrl }}">
-			<p><strong>{{ post.size }}</strong> - <strong>{{ post.price }}</strong></p>
+			<h2>{{ item.nickname }}</h2>
+			<img src="{{ item.image | prepend: SourceUrl }}">
+			<p><strong>{{ item.size }}</strong> - <strong>{{ item.price }}</strong></p>
 		</div>
 	</a>
 </div>
