@@ -4,7 +4,7 @@ layout: home
 {% include geturl.html %}
 <P>All prices negotiable, we need to submit our proposal for selected office(s).</p>
 <div class="card-grid">
-{% assign sorted = site.posts | sort: 'date' | reverse %}	
+{% assign sorted = site.posts | sort: 'mark' %}	
 {% for item in sorted %}
 <div class="card">
 	<a href="{{ item.url | prepend: SourceUrl }}">
